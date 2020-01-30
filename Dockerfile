@@ -1,10 +1,10 @@
 FROM python
 
-### set values ###
+### set bitpoll repo location and release version ###
 ENV BITPOLL_URL https://github.com/fsinfuhh/Bitpoll
 ENV BITPOLL_RELEASE 0.9.2
 
-### Prepareration ###
+### preparation ###
 RUN git clone $BITPOLL_URL --branch $BITPOLL_RELEASE \
   && cd Bitpoll \
   && apt-get update \
