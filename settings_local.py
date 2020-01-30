@@ -17,8 +17,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 ## If Bitpoll is served via HTTPS enable the next two options
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 
 
 #Add additionall installed apps here
@@ -47,29 +47,27 @@ DATABASES = {
 }
 
 ## Customize your instance
-SITE_NAME = 'example site'
-BASE_URL = 'https://example.de'
+SITE_NAME = 'Bitpoll'
+BASE_URL = 'http://localhost:8000'
 
 ## Url to the Base Homepage and Text on the Link, leave empty to not use this option
-HOME_URL = "https://example.de"
+HOME_URL = "http://localhost:8000"
 HOME_URL_NAME = "Home"
 
 ## Test mail functionality by printing mails to console:
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'example.de'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'user'
-EMAIL_HOST_PASSWORD = '1234'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'noreply@example.de'
-MAIL_SIGNATURE = 'Example-Team'
+# EMAIL_HOST = 'example.de'
+# EMAIL_PORT = '587'
+# EMAIL_HOST_USER = 'user'
+# EMAIL_HOST_PASSWORD = '1234'
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'noreply@example.de'
+# MAIL_SIGNATURE = 'Example-Team'
 
 ## if the imprint URL is not empty use it as an link to the imprint, else use IMPRINT_TEXT
-IMPRINT_URL = "https://example.de/imprint"
-#IMPRINT_TEXT = """
-#<h1>ImpressuXm</h1>
-#<p>Text goes here</p>
-#"""
+IMPRINT_URL = ""
+IMPRINT_TEXT = """
+"""
 
 #LOCALE_PATHS = (os.path.join(ROOT_DIR, 'locale'), )
 #LANGUAGES = (
@@ -78,7 +76,7 @@ IMPRINT_URL = "https://example.de/imprint"
 #    #('fr', 'Français'),
 #)
 
-REGISTER_ENABLED = True
+REGISTER_ENABLED = False
 #GROUP_MANAGEMENT = REGISTER_ENABLED
 
 ## Use ldap login
